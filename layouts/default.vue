@@ -2,12 +2,16 @@
   <div>
 
   <v-app id="inspire">
-    <v-toolbar color="blue-grey" dark fixed app clipped-right>
+    <v-toolbar color="deep-purple" dark fixed app clipped-right>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>binds.co</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
-    <SideNav :show="drawer"></SideNav>
+
+<v-navigation-drawer persistent v-model="drawer" enable-resize-watcher app>
+  <SideNav></SideNav>
+</v-navigation-drawer>
+
     <main>
       <v-content>
         <v-container fluid fill-height>
@@ -39,4 +43,16 @@ export default {
 
 
 <style>
+ .fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
 </style>

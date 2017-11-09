@@ -9,7 +9,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'buxt Description' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -20,6 +20,19 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  loadingIndicator: {
+  /*
+  ** See https://nuxtjs.org/api/configuration-loading-indicator for available loading indicators
+  ** You can add a custom indicator by giving a path
+  */
+   name: 'folding-cube',
+  /*
+  ** You can give custom options given to the template
+  ** See https://github.com/nuxt/nuxt.js/blob/dev/lib/app/views/loading/folding-cube.html
+  */
+  // color: '#DBE1EC'
+  // background: 'white'
+  },
   /*
   ** Build configuration
   */
