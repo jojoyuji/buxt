@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "postpackage-functions": "cp -r .nuxt nuxt.config.js functions/ && cd functions && yarn"
   },
   "dependencies": {
     "mdi": "^2.0.46",
